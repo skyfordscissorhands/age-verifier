@@ -226,30 +226,143 @@ for (var i = 0; i < recipe.ingredients.length; i++) {
 // Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" 
 // by J.R.R. Tolkien.'
 
-var books = [
-{
-    title:'The Hobbit',
-    author: 'J.R.R. Martin',
-    alreadyread: true
-},
-{
-    title: "Becoming Me" ,
-    author: "Michelle Obama",
-    alreadyread: true
-},
-{
-    title:'Daisy Jones & the six',
-    author: 'Taylor Reid',
-    alreadyread: true
+// var books = [
+// {
+//     title:'The Hobbit',
+//     author: 'J.R.R. Martin',
+//     alreadyread: true
+// },
+// {
+//     title: "Becoming Me" ,
+//     author: "Michelle Obama",
+//     alreadyread: true
+// },
+// {
+//     title:'Daisy Jones & the six',
+//     author: 'Taylor Reid',
+//     alreadyread: true
 
-}];
+// }];
 
-for (var i = 0; i < books.length; i++) {
-var book= books[i];
-var bookInfo= book.title + " by " + book.author;
-if (book.alreadyread){
-    console.log (`You already read ${bookInfo}`)
-} else {
-        console.log(`You still need to read ${bookInfo}`);
+// for (var i = 0; i < books.length; i++) {
+// var book= books[i];
+// var bookInfo= book.title + " by " + book.author;
+// if (book.alreadyread){
+//     console.log (`You already read ${bookInfo}`)
+// } else {
+//         console.log(`You still need to read ${bookInfo}`);
+//     }
+// }
+
+  var favMovie = {
+      titleName:'Pulp Fiction',
+        duration : 154,
+        starring : ["Uma Thurman", "Bruce Willis","Samuel L. Jackson","John Travola"]
+
+    };
+
+    var secFav = {
+        titleName:'Pulp Fiction',
+         duration : 154,
+         starring : ["Uma Thurman", "Bruce Willis","Samuel L. Jackson","John Travola"]
+     }
+
+     var thirdFav = {
+        titleName:'Pulp Fiction',
+         duration : 154,
+         starring : ["Uma Thurman", "Bruce Willis","Samuel L. Jackson","John Travola"]
+     }
+
+    function Detials(movie) {
+      document.write(movie.titleName + ' lasts for ' + movie.duration + 'minutes');
+      document.write('It stars ' + movie.starring.join('🍄') );
+      
     }
+    Details(favMovie);
+    Detials(secFav);
+    Detials(thirdFav);
+
+    // function details(movie){
+    //   document.write(`Title: ${favMovie.title} Duration: ${favMovie.duration} Starring:
+    //   ${favMovie.starring}`)
+    // }
+//     var movieNew = `My favorite movie is ${titleName}, it is ${duration} minutes long, starring ${stars}!`;
+// console.log(movieNew);
+
+    // for (var i = 0; i < movies.length; i++) {
+    // var movie= movies[i];
+    // var movieInfo= movie.title + movie.duration + movie.stars;
+    // }
+    //     console.log(movieInfo)
+    // };
+
+// Defining a function to display error message
+function printError (elemID, hintMsg) {
+  document.getElementById(elemID).innerHTML= hintMsg;
 }
+// Defining a function to validate form 
+function validateForm() {
+// Retrieving the values of form elements 
+const name= document.contactForm.name.value;
+const email= document.contactForm.email.value;
+const mobile= document.contactForm.mobile.value;
+const country= document.contactForm.country.value;
+const gender= document.contactForm.gender.value;
+const hobbies= [];
+const checkboxes= document.getElementsByTagName ('hobbies []');
+for (let i=0; i<checkboxes.length; i++) {
+  if(checkboxes[i]checked){
+  hobbies.push (checkboxes[i].value)
+}
+}
+}
+
+  // Defining error variables with a default value
+  var nameErrr= emailErr= moileErr= countryErr= genderErr=false;
+  //validate name
+  if(name==" ") {
+      printError("nameErr", "Please Enter a Valid Name")
+  } else {
+      var regex= /^[a-zA-Z\s]+$/;
+      if(regex.test(name) === false) {
+          printError("nameErr", "Please enter a valid name");
+      } else {
+          printError("nameErr", "")
+  nameErr=false;
+      }
+  }
+  // Validate name
+
+  
+  // Validate email address
+ 
+  if(email==" ") {
+      printError("emailErr", "Please Enter a Valid Email")
+  } else {
+      var regex= /^[a-zA-Z\s]+$/;
+      if(regex.test(email) === false) {
+          printError("emailErr", "Please enter a valid email");
+      } else {
+          printError("emailErr", "")
+  emailErr=false;
+      }
+  }
+  
+  
+  if(mobile==" ") {
+      printError("mobileErr", "Please Enter a Valid Name")
+  } else {
+      var regex= /^[a-zA-Z\s]+$/;
+      if(regex.test(mobile) === false) {
+          printError("mobileErr", "Please enter a valid name");
+      } else {
+          printError("mobileErr", "")
+  mobileErr=false;
+      }
+  }
+  
+  // Validate country
+ 
+  
+  // Validate gender
+  

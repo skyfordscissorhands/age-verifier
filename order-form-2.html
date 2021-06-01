@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Order form</title>
+</head>
+<body>
+    <form name="foodOrder" action="" method="get">    
+       
+        <p>ORDER FORM </p>
+
+        <!-- builds form -->
+       
+          Name:<input type="text" name="Name" value=" " size="20"><br>
+       
+          Phone:<input type="text" name="Phone" value=" " size="13"><br>
+        
+          Address:<input type="text" name="Address" value=" " size="100"><br/>
+       
+          Amount:<input type="text" name="Amount" value=" " size="8"><br/>
+        
+          <form id="frmOrder">
+            <p>
+            <input type="checkbox" id="chk0" />
+            Small bag
+            $<span id="txtPrice0">10</span>
+            <select id="sel0">
+                <option value="val0">0</option>
+                <option value="val1">1</option>
+                <option value="val2">2</option>
+                <option value="val3">3</option>
+            </select>
+            </p>
+            <p>
+            <input type="checkbox" id="chk1" />
+            large bag
+            $<span id="txtPrice1">20</span>
+            <select id="sel1">
+                <option value="val0">0</option>
+                <option value="val1">1</option>
+                <option value="val2">2</option>
+            </select>
+            </p>
+            <p>
+            <input type="text" id="txtTotal" size="8" />
+            </p>
+           
+         </form>
+
+         
+
+
+         <input type="button" onclick="show_confirm()" value="Order" />  
+        
+    <script src="order-from.js"></script>
+</body>
+</html>
